@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encrypt and Decrypt text with key</title>
+    <meta name="description" content="Encrypt and Decrypt text with key">
+
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+        integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ 
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div style="font-family: Segoe UI;" class="pageEncrypt">
+        
+  
+        <form class="formEncrypt" method="post" enctype="multipart/form-data">
+            <div class="form">
+                <h1>Message Encryption and Decryption with DES</h1>
+            <div>
+                <p><b>Write your text:</p>
+               
+                <textarea name="text">
+ </textarea>
+            </div>
+            <div><label>
+                    <p><b>Key:</b> </p>
+                    <p><input name="key" autocomplete="off" type="password"></p>
+                </label></div>
+            <div>
+                <p>
+                    <b>Algorithm:</b>
+
+                    <label><input name="algorithm" value="DES" type="radio"  checked="checked" > DES </label>
+                    
+                </p>
+            </div>
+            <div>
+                <p>
+                    <b>Action type:</b>
+                    <label><input name="action" value="1" checked="checked" type="radio">Encrypt</label>
+                    <label><input name="action" value="2" type="radio">Decrypt</label>
+                </p>
+            </div>
+           
+            <div>
+                <p><b>Result</b>
+                   
+                </p>
+                <textarea class="resultText" disabled="disabled"></textarea>
+            </div>
+            <div>
+                <button class="execute" type="submit">execute</button>
+                <button class="ClearForm" type="submit" onclick="window.location.reload(true);">clear all</button>
+            </div>
+            </div>
+        </form>
+        <script src="script.js"></script>
+        
+    </div>
+
+</body>
+
+</html>
