@@ -81,19 +81,19 @@ document.addEventListener('submit', function OnClick(event) {
             }
         }
         var email = document.getElementById('email').value;
-        var pnumber = document.getElementById('pnumber').value;
-        var body = "message: " + cipherText + "key: " + key;
+        var body = "Message: " + resultStr + "<br>Key: " + key;
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "gagandeepgahir@gmail.com",
             Password: "E8645476188766CC08B34C15D05C9C4C2743",
             To: email,
-            From: "gagandeepgahir@gmail.com",
+            From: 'gagandeepgahir@gmail.com' ,
             Subject: "Encrypted message",
-            Body: resultStr
+            Body: body
         }).then(
-            message => alert(message)
+            message => alert("Email sent Successfully!")
         );
+       
 
         // Decrypt
         if (action == 2) {
@@ -111,34 +111,15 @@ document.addEventListener('submit', function OnClick(event) {
         }
         resultText.value = resultStr;
         return false;
+        
     }
+    
+
 });
 
 
 
 
 
-//email
 
-
-// var btnval = document.getElementById('ecipher');
-// btn.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     btnval.value = 'Send.....';
-//     var email = document.getElementById('email').value;
-//     var pnumber = document.getElementById('pnumber').value;
-//     const form = document.getElementById('pnumber').value;
-//     const serviceID = 'default_service';
-//     const templateID = 'template_khjdaic';
-
-//     emailjs.sendForm(serviceID, templateID, cipherText)
-//         .then(() => {
-//             btnval.value = 'Send Email';
-//             alert('Sent!');
-//         }, (err) => {
-//             btnval.value = 'Send Email';
-//             alert(JSON.stringify(err));
-//         });
-
-// });
 
