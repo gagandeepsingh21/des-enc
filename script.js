@@ -70,9 +70,9 @@
     // Encrypt
     if (action == 1) {
                      
-                        if (algorithm == 'DES') {
-                            var cipherText = CryptoJS.DES.encrypt(text, key).toString();
-                        }
+    if (algorithm == 'DES') {
+        var cipherText = CryptoJS.DES.encrypt(text, key).toString();
+    }
 
     if (format == 1) {
         resultStr = btoa(cipherText);

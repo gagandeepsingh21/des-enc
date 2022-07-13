@@ -37,18 +37,20 @@
    .execute,
    .ClearForm {
        text-transform: uppercase;
-       background: #4c8fdf;
-       color: #fff;
+       background: linear-gradient(135deg, #71b7e6, #9b59b6);
+       color: #000;
        margin-top: 20px;
        font-size: 16px;
        padding: 14px 20px;
        border: none;
        cursor: pointer;
-       border-radius: 12px;
+       width: 100%;
+       font-weight: bold;
+       border-radius: 6px;
    }
 
    .ClearForm {
-       background: #2f3549;
+       background: linear-gradient(135deg, #71b7e6, #9b59b6);
        text-decoration: none;
    }
 
