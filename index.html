@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Encrypt and Decrypt text with key</title>
+    <title>Encryption and Decryption using DES</title>
     <meta name="description" content="Encrypt and Decrypt text with key">
 
     <!-- CryptoJS -->
@@ -12,57 +12,80 @@
         integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
- 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div style="font-family: Segoe UI;" class="pageEncrypt">
-        
-  
-        <form class="formEncrypt" method="post" enctype="multipart/form-data">
+
+
+        <form class="formEncrypt" method="post" enctype="multipart/form-data" id="form">
             <div class="form">
                 <h1>Message Encryption and Decryption with DES</h1>
-            <div>
-                <p><b>Write your text:</p>
-               
-                <textarea name="text">
- </textarea>
-            </div>
-            <div><label>
-                    <p><b>Key:</b> </p>
-                    <p><input name="key" autocomplete="off" type="password"></p>
-                </label></div>
-            <div>
-                <p>
-                    <b value="DES">Encryption algorithm:</b>
+                <div>
+                    <p>
+                        <b value="email">Email:</b>
 
-                    <label><input name="algorithm" value="DES" type="checkbox"  checked="checked" > DES algorithm </label>
-                    
-                </p>
-            </div>
-            <div>
-                <p>
-                    <b>Action type:</b>
-                    <label><input name="action" value="1" checked="checked" type="radio">Encrypt</label>
-                    <label><input name="action" value="2" type="radio">Decrypt</label>
-                </p>
-            </div>
-           
-            <div>
-                <p><b>Result</b>
-                   
-                </p>
-                <textarea class="resultText" disabled="disabled"></textarea>
-            </div>
-            <div>
-                <button class="execute" type="submit">execute</button>
-                <button class="ClearForm" type="submit" onclick="window.location.reload(true);">clear all</button>
-            </div>
+                        <label><input id="email" name="email" value="" type="text"> </label>
+
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b value="phone number">Phone number:</b>
+
+                        <label><input id="pnumber" name="pnumber" value="" type="text"> </label>
+
+                    </p>
+                </div>
+
+                <div>
+                    <p><b>Write your text:</p>
+
+                    <textarea name="text">
+ </textarea>
+                </div>
+                <div><label>
+                        <p><b>Key:</b> </p>
+                        <p><input name="key" autocomplete="off" type="password"></p>
+                    </label></div>
+
+
+                <div>
+                    <p>
+                        <b value="DES">Encryption algorithm:</b>
+
+                        <label><input name="algorithm" value="DES" type="checkbox" checked="checked"> DES algorithm
+                        </label>
+
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <b>Action type:</b>
+                        <label><input name="action" value="1" checked="checked" type="radio">Encrypt</label>
+                        <label><input name="action" value="2" type="radio">Decrypt</label>
+                    </p>
+                </div>
+
+                <div>
+                    <p><b>Result</b>
+
+                    </p>
+                    <textarea class="resultText" disabled="disabled"></textarea>
+                </div>
+                <div>
+                    <button id="ecipher" class="execute" type="submit">execute</button>
+                    <button class="ClearForm" type="submit" onclick="window.location.reload(true);">clear all</button>
+                </div>
             </div>
         </form>
         <script src="script.js"></script>
-        
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+
+
     </div>
 
 </body>
